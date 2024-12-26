@@ -1,0 +1,88 @@
+:root {
+    --color-primario: #87CEFA; /* Celeste */
+    --color-secundario: #0000FF; /* Azul */
+    --color-fondo: #FFFFFF;
+    --color-texto: #000000;
+    --color-inicio: #E0FFFF; /* Light Cyan */
+    --color-contacto: #F0F8FF; /* Alice Blue */
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: var(--color-secundario);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: var(--color-primario);
+    text-decoration: none;
+}
+
+button {
+    background-color: var(--color-primario);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: var(--color-secundario);
+}
+
+button:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+section {
+    padding: 20px;
+    background-color: var(--color-inicio);
+}
+
+#contacto {
+    background-color: var(--color-contacto);
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    --color-fondo: #121212;
+    --color-texto: #FFFFFF;
+    --color-inicio: #1E1E1E; /* Darker background for inicio section */
+    --color-contacto: #282828; /* Darker background for contacto section */
+}
+
+body.dark-mode nav {
+    background-color: #1F1F1F;
+}
+
+body.dark-mode button {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+body.dark-mode section {
+    background-color: var(--color-inicio);
+}
+
+body.dark-mode #contacto {
+    background-color: var(--color-contacto);
+}
