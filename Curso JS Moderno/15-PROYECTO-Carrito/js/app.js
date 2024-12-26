@@ -8,14 +8,25 @@ const listaCursos = document.querySelector('#lista-cursos');
 cargarEventListeners();
 function cargarEventListeners() {
     //Cuando agregas un curso presionando "Agregar al carrito"
-    listaCursos.addEventListener('click', agregarCursos);
+    listaCursos.addEventListener('click', agregarCurso);
 }
 
 
-function agregarCursos(e){
+function agregarCurso(e){
     e.preventDefault();
     if(e.target.classList.contains('agregar-carrito')){
-        console.log(e.target)
+        const cursoSeleccionado = e.target.parentElement.parentElement;
+        leerDatosCurso(cursoSeleccionado);
     }
     
+}
+// Lee el contenido del html al que le dimos click y exreae la informacion del curso
+function leerDatosCurso(curso){
+    console.log(curso)
+    //Crear un objeto con el contenido del curso Actual
+    const infoCurso = {
+        imagen : curso.querySelector('img').src,
+    }
+
+    console.log(infoCurso)
 }
